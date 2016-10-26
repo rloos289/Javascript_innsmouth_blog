@@ -1,14 +1,13 @@
 <div class="row">
   <div class="col-md-6">
     {{#if showUpdateForm}}
-      {{update-post}}
+      {{update-post showUpdate="showUpdate"}}
     {{else}}
       {{new-post savePost="savePost"}}
     {{/if}}
   </div>
   <div class="col-md-6">
     <h2 class="subtitle">Edit/Delete Posts</h2>
-    {{edit-delete model=model deletePost='deletePost'}}
-
+    {{edit-delete model=model deletePost='deletePost' showUpdate="showUpdate"}}
   </div>
 </div>

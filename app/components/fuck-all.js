@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   model() {
     return this.store.findAll('post');
   },
+  //if this is manually triggered, it displays the update form
   showUpdateForm: false,
   actions: {
     deletePost(post) {
@@ -11,6 +12,9 @@ export default Ember.Component.extend({
     },
     savePost(params) {
       this.sendAction('savePost', params);
+    },
+    showUpdate() {
+      this.set("showUpdateForm", true);
     }
   }
 });
