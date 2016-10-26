@@ -1,0 +1,5 @@
+{{#each model as |post|}}
+  <h4>{{post.title}}</h4>
+  <button class="btn" {{action "deletePost" post}}>Delete</button>
+  <hr>
+{{/each}}
