@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 posts">
+    {{#each model as |post|}}
+      <h3 class='title'>{{post.title}}</h3>
+      <p><img src={{post.picture}} alt={{post.title}}></p>
+      <p class='date'>{{post.date}}</p>
+      <p class='content'>{{post.content}}</p>
+      <hr>
+    {{/each}}
+  </div>
+</div>

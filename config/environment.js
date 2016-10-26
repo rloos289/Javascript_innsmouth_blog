@@ -15,9 +15,10 @@ module.exports = function(environment) {
 
     firebase: {
       apiKey: "AIzaSyBv__uN2uNi5G3sbsULjVmcCfCVlyU-f4c",
-        authDomain: "innsmouth-ab531.firebaseapp.com",
-        databaseURL: "https://innsmouth-ab531.firebaseio.com",
-        storageBucket: "innsmouth-ab531.appspot.com"
+      authDomain: "innsmouth-ab531.firebaseapp.com",
+      databaseURL: "https://innsmouth-ab531.firebaseio.com",
+      storageBucket: "innsmouth-ab531.appspot.com",
+      messagingSenderId: "707168459228",
     },
 
     APP: {

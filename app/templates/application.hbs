@@ -1,13 +1,17 @@
 <div class="container">
   <header>
-    <h1>Innsmouth Live(ish)</h1>
-    {{!-- {{#link-to 'index'}}Home{{/link-to}} --}}
-    {{#link-to 'about'}}About{{/link-to}}
-    {{!-- {{#link-to 'admin'}}Admin{{/link-to}} --}}
+    <h1 class="pagename">Innsmouth Live(ish)</h1>
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+        <li>{{#link-to 'about'}}About{{/link-to}}</li>
+        <li>{{#link-to 'admin'}}Admin{{/link-to}}</li>
+      </ul>
+    </nav>
   </header>
   {{outlet}}
   <footer>
-  <p>
+  <p class="footer">
     Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn
   </p>
   </footer>
