@@ -1,4 +1,4 @@
-<h2 class="subtitle">Create Post</h2>
+<h2 class="subtitle">Update Post</h2>
 <form class='newpost'>
   <div class="form-group">
     <label for="title">Title</label>
@@ -16,5 +16,5 @@
     <label for="content">Content</label>
     {{textarea class="form-control" cols="50" rows="20" value=content id="content"}}
   </div>
-  <button class="btn" {{action 'savePost'}}>Save</button>
+  <button class="btn" {{action 'updatePost'}}>Update</button>
 </form>
