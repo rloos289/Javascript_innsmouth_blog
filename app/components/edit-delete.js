@@ -7,8 +7,8 @@ export default Ember.Component.extend({
         this.sendAction('deletePost', post);
       }
     },
-    showUpdate() {
-      this.sendAction('showUpdate');
+    showUpdate(post) {
+      this.sendAction('showUpdate', post);
     }
   }
 });

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6">
     {{#if showUpdateForm}}
-      {{update-post showUpdate="showUpdate"}}
+      {{update-post showUpdate="showUpdate" currentPost=currentPost updatePost='updatePost'}}
     {{else}}
       {{new-post savePost="savePost"}}
     {{/if}}

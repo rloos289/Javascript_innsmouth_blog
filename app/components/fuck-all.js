@@ -5,6 +5,7 @@ export default Ember.Component.extend({
     return this.store.findAll('post');
   },
   //if this is manually triggered, it displays the update form
+  currentPost: null,
   showUpdateForm: false,
   actions: {
     deletePost(post) {
@@ -13,8 +14,13 @@ export default Ember.Component.extend({
     savePost(params) {
       this.sendAction('savePost', params);
     },
-    showUpdate() {
+    showUpdate(post) {
       this.set("showUpdateForm", true);
+      this.set('currentPost', post);
+    },
+    updatePost(params) {
+      this.sendAction('updatePost', this.currentPost, params);
+      this.set('showUpdateForm', false);
     }
   }
 });
