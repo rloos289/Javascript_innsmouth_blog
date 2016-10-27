@@ -1,0 +1,13 @@
+<hr>
+<h2 class="subtitle">Add Comment</h2>
+<form class='newcomment'>
+  <div class="form-group">
+    <label for="name">Name</label>
+    {{input class="form-control" value=name id="name"}}
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    {{textarea class="form-control" rows="12" value=content id="content"}}
+  </div>
+  <button class="btn" {{action 'saveComment'}}>Save</button>
+</form>

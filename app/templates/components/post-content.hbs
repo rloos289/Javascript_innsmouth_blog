@@ -1,8 +1,11 @@
 {{!-- footer problem --}}
 
 <div class="col-md-8 col-md-offset-2 posts">
-  <h3 class='title'>{{model.title}}</h3>
-  <p><img src={{model.picture}} alt={{model.title}}></p>
-  <p class='date'>{{model.date}}</p>
-  <p class='content'>{{model.content}}</p>
+  <h3 class='title'>{{post.title}}</h3>
+  <p><img src={{post.picture}} alt={{post.title}}></p>
+  <p class='date'>{{post.date}}</p>
+  <p class='content'>{{post.content}}</p>
+</div>
+<div class="col-md-8 col-md-offset-2 comment">
+  {{new-comment post=post saveComment="saveComment"}}
 </div>
