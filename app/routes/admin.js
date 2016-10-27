@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
+    return Ember.RSVP.hash({
+      posts: this.store.findAll('post'),
+      comments: this.store.findAll('comment')
+    });
   },
   actions: {
     savePost(params) {
@@ -11,7 +14,7 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
     deletePost(post) {
-      var comment_deletions = post.get('comments').map(function(review) {
+      var comment_deletions = post.get('comments').map(function(comment) {
         return comment.destroyRecord();
       });
     Ember.RSVP.all(comment_deletions).then(function() {
