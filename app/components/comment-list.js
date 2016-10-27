@@ -4,6 +4,9 @@ export default Ember.Component.extend({
   actions: {
     deleteComment(comment) {
       this.sendAction('deleteComment', comment);
+    },
+    showUpdateComment(comment) {
+      this.sendAction('showUpdateComment', comment);
     }
   }
 });

@@ -7,6 +7,11 @@
   <p class='content'>{{post.content}}</p>
 </div>
 <div class="col-md-8 col-md-offset-2 comment">
+  {{#if showUpdateComment}}
+  {{update-comment updateComment="updateComment" currentComment=currentComment}}
+  {{else}}
   {{new-comment post=post saveComment="saveComment"}}
-  {{comment-list post=post comments=comments deleteComment='deleteComment'}}
+  {{/if}}
+  {{comment-list post=post comments=comments deleteComment='deleteComment' showUpdateComment='showUpdateComment'}}
+
 </div>

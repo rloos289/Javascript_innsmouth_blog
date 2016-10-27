@@ -1,0 +1,13 @@
+<hr>
+<h2 class="subtitle">Update Comment</h2>
+<form class='updatecomment'>
+  <div class="form-group">
+    <label for="name">Name</label>
+    {{input class="form-control" value=currentComment.name id="name"}}
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    {{textarea class="form-control" rows="12" value=currentComment.content id="content"}}
+  </div>
+  <button class="btn" {{action 'updateComment'}}>Update</button>
+</form>

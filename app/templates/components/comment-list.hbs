@@ -2,7 +2,7 @@
   <p>Name: {{comment.name}}</p>
   <p>Comment: {{comment.content}}</p>
   <button class="btn" {{action "deleteComment" comment}}>Delete</button>
-  {{!-- <button class="btn" {{action "showUpdate" post}}>Update</button> --}}
+  <button class="btn" {{action "showUpdateComment" comment}}>Update</button>
   <hr>
 
 {{/each}}
